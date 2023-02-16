@@ -1,0 +1,20 @@
+procedure triInsertion(var tab: array of integer);
+var
+  i, j, temp: integer;
+begin
+  for i := 1 to Length(tab)-1 do
+  begin
+    j := i;
+    while (j > 0) and (tab[j] < tab[j-1]) do
+    begin
+      temp := tab[j];
+      tab[j] := tab[j-1];
+      tab[j-1] := temp;
+      j := j - 1;
+    end;
+  end;
+end;
+
+
+
+//
